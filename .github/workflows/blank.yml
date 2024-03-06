@@ -25,12 +25,21 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      # Runs a single command using the runners shell
+      - name: check the java version
+        run: java -version
+
+      - name: Set up Maven
+        uses: actions/setup-maven@v1
+        with:
+          maven-version: '3.8.3'
+
+      # Runs a single command using the runners shell
+      - name: check the maven version
+        run: mvn -v   
