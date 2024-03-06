@@ -63,7 +63,17 @@ jobs:
         run: pip install bumpversion -U
 
       - name: check the maven version
-        run: bumpversion patch         
+        run: bumpversion patch     
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "miriyamravi098@gmail.com"
+          git config --local user.name "MIRIYAMRAVI"
+          git add .
+          git commit -m "Bump version"
+          git push
+
+
 
 
 
