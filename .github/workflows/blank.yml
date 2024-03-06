@@ -39,6 +39,15 @@ jobs:
       #   uses: actions/setup-maven@v1
       #   with:
       #     maven-version: '3.8.3'
+      - name: Display Git version
+        run: git --version
+
+      - name: Check git is working
+        run: |
+          git config --global user.email "bumpversion-test-git@github.actions"
+          git config --global user.name "Testing Git on Travis CI"
+          git --version
+          git config --list
 
       - name: Set up Python
         uses: actions/setup-python@v2
