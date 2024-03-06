@@ -24,8 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      with:
-        token: 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
+        with:
+          token: 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
 
       - name: Set up JDK
         uses: actions/setup-java@v2
