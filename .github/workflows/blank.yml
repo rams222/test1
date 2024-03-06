@@ -35,10 +35,10 @@ jobs:
       - name: check the java version
         run: java -version
 
-      - name: Set up Maven
-        uses: actions/setup-maven@v1
-        with:
-          maven-version: '3.8.3'
+      # - name: Set up Maven
+      #   uses: actions/setup-maven@v1
+      #   with:
+      #     maven-version: '3.8.3'
 
       # Runs a single command using the runners shell
       - name: check the maven version
