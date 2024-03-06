@@ -75,7 +75,7 @@ jobs:
           git status
           git add .
           git commit -m "Bump version"
-          git push
+          git push origin main
 
 
 
