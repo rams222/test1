@@ -26,7 +26,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          token: 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
+          token: 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
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
